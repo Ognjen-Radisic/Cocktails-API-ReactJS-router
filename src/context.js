@@ -32,7 +32,10 @@ const AppProvider = ({ children }) => {
             glass: strGlass,
           }
         })
-      } else setCocktails([])
+        setCocktails(newCocktails)
+      } else {
+        setCocktails([])
+      }
       setLoading(false)
     } catch (error) {
       console.log(error)
